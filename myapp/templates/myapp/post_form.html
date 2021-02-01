@@ -1,0 +1,33 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-9">
+        <br>
+        <h2>登録・更新ページ</h2>
+        <br>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>タイトル</label>
+                {{form.title}}
+            </div>
+            <br>
+            <div class="form-group">
+                <label>内容</label>
+                {{form.content}}
+            </div>
+            <br>
+            <div class="form-group">
+                <label>公開</label>
+                {{form.state}}
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">保存</button>
+            <br>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
